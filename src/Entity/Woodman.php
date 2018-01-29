@@ -28,4 +28,69 @@ class Woodman
      * @ORM\Column(type="integer")
      */
     private $age;
+
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param mixed $id
+     */
+    public function setId($id): void
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getForest()
+    {
+        return $this->forest;
+    }
+
+    /**
+     * @param mixed $forest
+     */
+    public function setForest($forest): void
+    {
+        $this->forest = $forest;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * @param mixed $name
+     */
+    public function setName($name): void
+    {
+        $this->name = $name;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getAge()
+    {
+        return $this->age;
+    }
+
+    /**
+     * @param mixed $age
+     */
+    public function setAge($age): void
+    {
+        $this->age = $age;
+    }
+
 }
