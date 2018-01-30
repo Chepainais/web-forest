@@ -21,11 +21,11 @@ class Forest
      */
     private $name;
     /**
-     * @ORM\OneToOne(targetEntity="Location")
+     * @ORM\OneToMany(targetEntity="Location",mappedBy="forest_id")
      */
     private $location;
     /**
-     * @ORM\OneToMany(targetEntity="Resident", mappedBy="forestId")
+     * @ORM\OneToMany(targetEntity="Resident",mappedBy="forest_id")
      */
     private $residents;
 
@@ -35,7 +35,7 @@ class Forest
      */
     private $tree_species;
     /**
-     * @ORM\OneToOne(targetEntity="Woodman",mappedBy="woodman")
+     * @ORM\OneToOne(targetEntity="Woodman",mappedBy="forest_id")
      */
     private $woodman;
 

@@ -15,6 +15,11 @@ class Resident
      * @ORM\Column(type="integer")
      */
     private $id;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Forest",inversedBy="residents")
+     */
+    private $forest_id;
     /*
      * @ORM\Column(type="string")
      */

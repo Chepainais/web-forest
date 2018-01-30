@@ -16,10 +16,10 @@ class Woodman
      */
     private $id;
     /**
-     * @ORM\OneToOne(targetEntity="Forest", inversedBy="woodman")
+     * @ORM\OneToOne(targetEntity="Forest",inversedBy="woodman")
      * @ORM\JoinColumn(name="forest_id", referencedColumnName="id")
      */
-    private $forest;
+    private $forest_id;
     /**
      * @ORM\Column(type="string")
      */
@@ -43,6 +43,22 @@ class Woodman
     public function setId($id): void
     {
         $this->id = $id;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getForestId()
+    {
+        return $this->forest_id;
+    }
+
+    /**
+     * @param mixed $forest_id
+     */
+    public function setForestId($forest_id): void
+    {
+        $this->forest_id = $forest_id;
     }
 
     /**

@@ -9,6 +9,8 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class TreeSpecies
 {
+    const TREE_TYPE_LEAF = 1;
+    const TREE_TYPE_NEEDLE = 2;
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
